@@ -1,0 +1,126 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPU6/2pUOhS0hpieCspVvub",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/USIS003320/Programacion-III/blob/main/Codigos%20de%20clase\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CIM_srbZFUbf"
+      },
+      "source": [
+        "Conversores"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vSoNkNBH2lcL"
+      },
+      "source": [
+        "etiquetas = [\n",
+        "             [], #0\n",
+        "             [0,\"1. Dolar\",\"2. Peso mexicano\",\"3. Quetzales\",\"4. Colon SV\",\"5. Lempiras\",\"6. Cordobas\",\"7. Colon CR\"],#monedas\n",
+        "             [0,\"1. Metro\",\"2. Centimetro\",\"3. Pulgadas\",\"4. Pies\",\"5. Varas\",\"6. Yardas\",\"7. Kilometros\",\"8. Millas\"],#Longitud\n",
+        "             [0,\"1. Libra\",\"2.Gramos\",\"3. Kilogramos\",\"4. Onzas\",\"5. Tonelada corta\"],#Masa\n",
+        "]\n",
+        "valores = [\n",
+        "           [],#\n",
+        "           [0,1,19.91,7.74,8.75,23.96,35.11,624.24],\n",
+        "           [0,1,100,39.37,3.28,1.1963081929167,1.09,0.001,0.00053],\n",
+        "           [0,1,463.59,0.45,16,0.0005]\n",
+        "]\n",
+        "def conversores(opcion, de, a, cantidad):\n",
+        "  return valores[opcion][a] / valores[opcion][de] * cantidad\n",
+        "\n",
+        "\n",
+        "print(\" ** Menu Conversores ** \")\n",
+        "print(\" 1. Monedas, \\n 2. Longitud, \\n 3. Masa \")\n",
+        "opcion = int(input(\"CONVERSOR: \"))\n",
+        "\n",
+        "print(etiquetas[opcion] )\n",
+        "de = int(input(\"De: \"))\n",
+        "a = int(input(\"A: \"))\n",
+        "cantidad = float(input(\"Cantidad: \"))\n",
+        "\n",
+        "print( etiquetas[opcion][de], \" a \", etiquetas[opcion][a], \" es: \", conversores (opcion, de, a, cantidad) )"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C3MO-kkYFfBQ"
+      },
+      "source": [
+        "Tabla de meses acumulados"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 246
+        },
+        "id": "Fj1VlGfQFcrw",
+        "outputId": "5032d079-4fbc-4355-d112-067feae92cf4"
+      },
+      "source": [
+        "meses = int(input(\"meses: \"))\n",
+        "i = 0\n",
+        "acumulacion = 0\n",
+        "while(i <= nmeses):\n",
+        "  acumulacion += i\n",
+        "  i+=1\n",
+        "  print(\"meses: \", nmeses, \"acumulado: \", acumulacion)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "meses: 7\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-53c319293744>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0mi\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0macumulacion\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m \u001b[0;32mwhile\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mi\u001b[0m \u001b[0;34m<=\u001b[0m \u001b[0mnmeses\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      5\u001b[0m   \u001b[0macumulacion\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0mi\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m   \u001b[0mi\u001b[0m\u001b[0;34m+=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'nmeses' is not defined"
+          ]
+        }
+      ]
+    }
+  ]
+}
